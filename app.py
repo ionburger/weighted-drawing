@@ -5,7 +5,7 @@ from os import getcwd
 from draw import choice
 
 
-app = Flask("app")
+app = Flask("draw")
 
 @app.route('/')   
 def main():   
@@ -21,5 +21,3 @@ def result():
         f.save(f"uploads/{fname}")
 
         return render_template("success.html", result = choice(f"uploads/{fname}"))
-  
-app.run()
