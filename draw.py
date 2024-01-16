@@ -1,7 +1,9 @@
 import random
+import os
 def choice(file):
-    with open (file) as f:
+    with open (f"uploads/{file}") as f:
         data = f.read()
+    os.remove(f"uploads/{file}")
 
     pool = []
     passes = data.split("\n")
