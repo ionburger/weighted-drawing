@@ -1,11 +1,13 @@
 <html>   
 <head>   
     <title>Buttercrate Hosting</title>   
-</head>   
+</head>
+<p>Upload a file</p>   
 <body>   
     <form action = "/result" method = "post" enctype="multipart/form-data">   
         <input type="file" name="file" />   
         <input type = "submit" value="Upload">   
-    </form>   
+    </form>  
+<p>{{ error }}</p> 
 </body>   
 </html>

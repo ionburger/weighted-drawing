@@ -1,9 +1,13 @@
 import random
 import os
 def choice(file):
-    with open (f"uploads/{file}") as f:
-        data = f.read()
-    os.remove(f"uploads/{file}")
+    try:
+        with open (file) as f:
+            data = f.read()
+    except:
+        os.remove(file)
+        return "Invalid file"
+    os.remove(file)
 
     pool = []
     passes = data.split("\n")
